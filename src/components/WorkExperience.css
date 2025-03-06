@@ -1,0 +1,160 @@
+@keyframes fallDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Light Mode */
+.work-experience-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #F8F8FF, #E8BFFB); /* Light gradient */
+}
+
+.work-experience-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(94, 43, 151, 0.3);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: fallDown 0.8s ease-out;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Light Mode (Purple) */
+.light-mode .work-experience-title {
+    color: #6A0DAD;
+}
+
+/* Dark Mode (Yellow) */
+.dark-mode .work-experience-title {
+    color: #FFD700; 
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Glassmorphism Style Cards */
+.experience-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styling */
+.experience-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2A1B3D;
+}
+
+/* Role styling */
+.experience-role {
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #6D28D9;
+    margin-top: 5px;
+}
+
+/* Date Styling */
+.experience-date {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Description Styling */
+.experience-description {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* Bullet points */
+.experience-description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-description li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Custom Bullet */
+.experience-description li::before {
+    content: "⚡"; 
+    position: absolute;
+    left: 0;
+    color: #6D28D9;
+    font-size: 1.2rem;
+}
+
+/* Dark Mode Styling */
+.dark-mode .work-experience-container {
+    background: linear-gradient(to bottom, #121212, #1e1e1e); /* Dark Mode Gradient - it works! */
+}
+
+.dark-mode .experience-card {
+    background: rgba(40, 40, 40, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .experience-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.dark-mode .experience-title {
+    color: #d4aaff;
+}
+
+.dark-mode .experience-role {
+    color: #8e44ad;
+}
+
+.dark-mode .experience-date {
+    color: #b0b0b0;
+}
+
+.dark-mode .experience-description {
+    color: #cfcfcf;
+}
+
+.dark-mode .experience-description li::before {
+    color: #bb86fc;
+}
+
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+}

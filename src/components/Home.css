@@ -1,0 +1,74 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;  /* Ensures dark mode applies to full page */
+  }
+  
+  body, html {
+    background-color: #111;  
+    color: #fff;  
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Moves text to the front */
+  .text-container {
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+  }
+
+  @keyframes sparkle {
+    0% { text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8), 0px 0px 15px rgba(255, 215, 0, 0.5); }
+    50% { text-shadow: 0px 0px 12px rgba(255, 215, 0, 1), 0px 0px 20px rgba(255, 215, 0, 0.7); }
+    100% { text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8), 0px 0px 15px rgba(255, 215, 0, 0.5); }
+  }
+  
+  
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+  /* Adjustments in title & subtitle spacing */
+.main-title {
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  color: #E5C100;
+  text-shadow: 0px 0px 8px rgba(229, 193, 0, 0.8);
+  position: relative;
+  z-index: 10;  /* Ensures title stays on top */
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  color: #D4AF37;
+  position: relative;
+  z-index: 9;  /* Ensures subtitle is BELOW title */
+  margin-top: 15px; /* Adds spacing to prevent overlap */
+}
+
+/* Light Mode Title & Subtitle Styling */
+.light-mode .main-title,.light-mode .sub-title {
+  color: white; 
+  text-shadow: 1px 1px 4px rgba(68, 49, 141, 1); 
+}
+
+/* 3D Blob size */
+  .three-canvas {
+    width: 150%;
+    height: 150vh;
+    position: absolute;
+    top: 5%;  
+    z-index: 1;  
+    filter: drop-shadow(0px 0px 10px rgba(68, 49, 141, 0.5));  /* This gives a soft purple glow - detailing */
+  }
+  

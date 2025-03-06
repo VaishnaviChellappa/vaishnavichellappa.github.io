@@ -36,3 +36,241 @@
     transform: rotate(360deg);
   }
 }
+
+/* Default Light Mode */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Light Mode Background */
+body.light-mode {
+  background-color: #E8BFFB; /* Brighter peachish orange */
+  color: #222; /* Darker text for contrast */
+}
+
+/* Light Mode Navbar */
+.light-mode .navbar {
+  background: #F4A261; /* Softer peach tone */
+}
+
+/* Light Mode Title & Designation Sparkling Silver */
+.light-mode .main-title,
+.light-mode .sub-title {
+  color: silver;
+  animation: sparkle-light 2s infinite alternate;
+}
+
+/* Light Mode Blob Glow */
+.light-mode .three-canvas {
+  filter: drop-shadow(0px 0px 20px rgba(255, 215, 135, 0.6)); /* Soft golden glow */
+}
+
+
+/* Dark Mode Styling */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(244, 162, 97, 0.9); /* Semi-transparent */
+  padding: 15px 0;
+  backdrop-filter: blur(10px); /* Adds a glassmorphism effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures navbar is always on top */
+}
+
+/* Navbar Links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 20px;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect - Underline Animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Highlight the Active Page */
+.navbar a.active {
+  color: #5e2b97; /* distinct highlight color */
+}
+
+.navbar a.active::after {
+  width: 100%;
+  background: #5e2b97;
+}
+
+/* Dark Mode Navbar */
+.dark-mode .navbar {
+  background: rgba(34, 34, 34, 0.9);
+}
+
+/* Dark Mode Links */
+.dark-mode .navbar a {
+  color: #f4a261;
+}
+
+.dark-mode .navbar a.active {
+  color: #e5c100;
+}
+
+
+/* Dark Mode Buttons */
+/* Dark Mode Toggle - Circular Button */
+.toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #430198;
+  color: white;
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1000; 
+  pointer-events: auto; 
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Light Mode Button */
+.light-mode .toggle-btn {
+  background: #F4A261;
+  color: black;
+}
+
+
+/* Music Toggle Button */
+.music-toggle-btn {
+  position: fixed;
+  bottom: 150px; /* Placed above the dark mode button */
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #430198;
+  color: white;
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.music-toggle-btn:hover {
+  background: #430198;
+  transform: scale(1.1);
+}
+
+/* Dark Mode Button */
+.toggle-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #430198;
+  color: white;
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Light Mode Music Button */
+.light-mode .music-toggle-btn {
+  background: #f4a261;
+  color: black;
+}
+
+.light-mode .music-toggle-btn:hover {
+  background: #ffbf69;
+}
+
+/* Applies the gradient background to all pages */
+.page-container {
+  min-height: 100vh;
+  padding: 50px;
+  background: linear-gradient(to bottom, #F8F8FF, #E8BFFB); /* Light gradient */
+}
+
+/* Dark mode background */
+.dark-mode .page-container {
+  background: linear-gradient(to bottom,#230349, #09050f); /* Dark gradient */
+}
+
+/* Cursor Trail Effect */
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(228, 218, 105);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  mix-blend-mode: difference;
+}
+
+/* Spotlight Hover Effect */
+.spotlight {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(210, 123, 239, 0.918) 0%, rgba(255, 255, 255, 0) 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 999;
+}
