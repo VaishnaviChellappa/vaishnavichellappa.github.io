@@ -1,0 +1,98 @@
+/* Contact Form Container */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 20px;
+  }
+  
+  /* Animated Title */
+  .contact-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5e2b97;
+    text-shadow: 2px 2px 5px rgba(94, 43, 151, 0.3);
+    margin-bottom: 20px;
+  }
+  
+  /* 3D Styled Form */
+  .contact-form {
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), -6px -6px 15px rgba(255, 255, 255, 0.6);
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Input Fields */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Hover & Focus Effects */
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Send Button */
+  .send-btn {
+    background: #5e2b97;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(94, 43, 151, 0.4);
+  }
+  
+  .send-btn:hover {
+    background: #7a42c0;
+    transform: scale(1.05);
+  }
+  
+  /* Dark Mode Styling */
+  .dark-mode .contact-form {
+    background: linear-gradient(145deg, #222, #1a1a1a);
+    box-shadow: 6px 6px 15px rgba(255, 255, 255, 0.1), -6px -6px 15px rgba(0, 0, 0, 0.6);
+  }
+  
+  .dark-mode .contact-title {
+    color: #e5c100;
+    text-shadow: 2px 2px 5px rgba(255, 221, 87, 0.3);
+  }
+  
+  .dark-mode .contact-form input,
+  .dark-mode .contact-form textarea {
+    background: #333;
+    color: white;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-mode .send-btn {
+    background: #e5c100;
+    color: black;
+    box-shadow: 3px 3px 10px rgba(255, 221, 87, 0.4);
+  }
+  
+  .dark-mode .send-btn:hover {
+    background: #ffdd57;
+  }
+  
