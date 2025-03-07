@@ -1,6 +1,6 @@
 # Vaishnavi's Portfolio Website
 
-This is my personal portfolio website built using **React.js, Three.js, and Email.js** to showcase my background, past projects, and experience.
+This is my personal portfolio website (https://vaishnavichellappa.github.io) built using **React.js, Three.js, and Email.js** to showcase my background, past projects, and experience.
 
 ## 🚀 Features Implemented
 
